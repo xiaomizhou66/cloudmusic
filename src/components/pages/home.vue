@@ -32,6 +32,7 @@
                   <Avatar :src="avatarUrl" />
                   <!-- </div> -->
                 </li>
+                <!-- 个人信息下拉框 -->
                 <li>
                   <Dropdown trigger="click">
                     <a href="javascript:void(0)">
@@ -156,7 +157,7 @@
                     </DropdownMenu>
                   </Dropdown>
                 </li>
-                <li>
+                <li @click="toSetting">
                   <Icon type="md-settings" /> 设置</li>
               </ul>
             </div>
@@ -270,6 +271,9 @@ export default {
       this.signin = '已签到'
       this.isDisabled = true
     },
+    toSetting () {
+      this.$router.push('/setting')
+    },
     musicListIs () {
       var musicList = this.musicList
       if (musicList === 1 || musicList === 2 || musicList === 3) {
@@ -287,18 +291,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
-@laout-hight: 50px;
+@layout-hight: 50px;
 
 .home {
   min-width: 970px;
   .ivu-layout-header,
   .ivu-layout-footer {
-    height: @laout-hight;
-    line-height: @laout-hight;
+    height: @layout-hight;
+    line-height: @layout-hight;
     padding: 0;
   }
   .ivu-layout-content {
-    margin-top: @laout-hight;
+    margin-top: @layout-hight;
     min-height: 800px;
     padding: 0;
   }
@@ -314,7 +318,7 @@ export default {
     .logo {
       float: left;
       width: 200px;
-      height: @laout-hight;
+      height: @layout-hight;
       text-align: left;
       padding-left: 10px;
       font-size: 17px;
@@ -339,6 +343,7 @@ export default {
     }
     .header-icon {
       text-align: right;
+      padding-right: 50px;
       li {
         display: inline-block;
         padding-right: 10px;
@@ -346,12 +351,13 @@ export default {
           color: #fff;
         }
         .ivu-dropdown {
-          height: @laout-hight;
+          height: @layout-hight;
           // .triangle {
           //   position: absolute;
           //   top: 40px;
           // }
           .ivu-select-dropdown {
+            z-index: 100;//这个没有效果啊，怎么做？
             position: relative;
             &:before {
               content: "";
@@ -371,7 +377,7 @@ export default {
               min-width: 300px;
               text-align: left;
               .ivu-dropdown-rel {
-                height: @laout-hight !important;
+                height: @layout-hight !important;
               }
               .ivu-dropdown-item {
                 display: block;

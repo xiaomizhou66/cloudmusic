@@ -1,5 +1,5 @@
 <template>
-  <div class="music-list">
+  <div class="musiclikelist">
     <common-list :listname="ListName"></common-list>
   </div>
 </template>
@@ -7,19 +7,22 @@
 <script>
 import List from '@/components/common/list'
 export default {
-  name: 'HelloWorld',
+  name: 'Musiclikelist',
+  // 注册组件
   components: {
     'common-list': List
   },
   data () {
     return {
-      ListName: '普通歌单'
+      ListName: '我喜欢的音乐'
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less">
+.musiclikelist{
 
+}
 </style>
