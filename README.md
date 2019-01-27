@@ -1,30 +1,15 @@
-# cloudmusic
+# cloudmusic 仿网易云音乐 app 做的 web
 
-> A Vue.js project
+> A Vue.js project 使用 vue.js 
 
-## Build Setup
+## Build Setup 
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+npm install # install dependencies 还原依赖包
+npm run dev # serve with hot reload at localhost:8080 本地服务运行
+npm run build # build for production with minification  打包上线
+npm run build --report # build for production and view the bundle analyzer report
+npm run unit # run unit tests 运行测试
+npm run e2e # run e2e tests 运行测试
+npm test # run all tests 运行测试
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
